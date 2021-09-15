@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".view.fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_orcamento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/et_editNome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="@string/digite_nome"
+            android:inputType="textPersonName"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_editCpf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="26dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_card"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="@string/digite_cpf"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_editNome" />
+
+        <EditText
+            android:id="@+id/et_editTelefone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="26dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_phone"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="@string/digite_telefone"
+            android:inputType="phone"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_editCpf" />
+
+        <EditText
+            android:id="@+id/et_editEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="26dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="@string/digite_email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_editTelefone" />
+
+        <EditText
+            android:id="@+id/et_ramo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="26dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_ramo"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="@string/digite_ramo"
+            android:inputType="date"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_editEmail" />
+
+        <EditText
+            android:id="@+id/et_nomeEmpresa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="26dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_empresa"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="@string/digite_nomeEmpresa"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_ramo" />
+
+        <TextView
+            android:id="@+id/tv_templates"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/templates_preferidos"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_nomeEmpresa" />
+
+        <CheckBox
+            android:id="@+id/template1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Template A"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_templates" />
+
+        <CheckBox
+            android:id="@+id/template2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Template B"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/template1"
+            app:layout_constraintTop_toBottomOf="@id/tv_templates" />
+
+        <CheckBox
+            android:id="@+id/template3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Template C"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/template2" />
+
+        <CheckBox
+            android:id="@+id/template4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Template D"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/template3"
+            app:layout_constraintTop_toBottomOf="@id/template2" />
+
+        <CheckBox
+            android:id="@+id/template5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Template E"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/template4" />
+
+        <CheckBox
+            android:id="@+id/template6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Template F"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/template5"
+            app:layout_constraintTop_toBottomOf="@id/template4" />
+
+        <Button
+            android:id="@+id/btn_enviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/login_button"
+            android:text="@string/enviar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/template6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_version"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_versao"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_code"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_versaoCompleta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/version"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintLeft_toRightOf="@id/img_versao"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img_versao" />
+
+        <TextView
+            android:id="@+id/tv_versao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/versao_app"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toRightOf="@id/img_versao"
+            app:layout_constraintTop_toBottomOf="@id/tv_versaoCompleta" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

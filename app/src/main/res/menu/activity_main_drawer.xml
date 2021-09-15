@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_orcamento"
+            android:icon="@drawable/ic_orcamento"
+            android:title="@string/menu_realizar_orcamento" />
+        <item
+            android:id="@+id/nav_meusOrcamentos"
+            android:icon="@drawable/ic_orcamentos"
+            android:title="@string/menu_meus_orcamentos" />
+        <item
+            android:id="@+id/nav_todosUsuarios"
+            android:icon="@drawable/ic_person"
+            android:title="@string/menu_todos_usuarios" />
+    </group>
+</menu>

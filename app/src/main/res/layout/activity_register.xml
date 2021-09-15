@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="16dp"
+    tools:context=".view.RegisterActivity">
+
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+
+    <TextView
+        android:id="@+id/tv_registro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-light"
+        android:gravity="center"
+        android:text="@string/registro_conta"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_logo" />
+
+    <EditText
+        android:id="@+id/et_registerNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="26dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_person"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/white"
+        android:fontFamily="sans-serif-condensed-light"
+        android:hint="@string/digite_nome"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_registro" />
+
+    <EditText
+        android:id="@+id/et_registerCpf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="26dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_card"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/white"
+        android:fontFamily="sans-serif-condensed-light"
+        android:hint="@string/digite_cpf"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_registerNome" />
+
+    <EditText
+        android:id="@+id/et_registerEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="26dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/white"
+        android:fontFamily="sans-serif-condensed-light"
+        android:hint="@string/digite_email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_registerCpf" />
+
+    <EditText
+        android:id="@+id/et_registerTelefone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="26dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_phone"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/white"
+        android:fontFamily="sans-serif-condensed-light"
+        android:hint="@string/digite_telefone"
+        android:inputType="phone"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_registerEmail" />
+
+    <EditText
+        android:id="@+id/et_registerNascimento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="26dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_calendar"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/white"
+        android:fontFamily="sans-serif-condensed-light"
+        android:hint="@string/digite_nascimento"
+        android:inputType="date"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_registerTelefone" />
+
+    <EditText
+        android:id="@+id/et_registerSenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="26dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/white"
+        android:fontFamily="sans-serif-condensed-light"
+        android:hint="@string/digite_senha"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_registerNascimento" />
+
+    <EditText
+        android:id="@+id/et_confirmaRegisterSenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="26dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/white"
+        android:fontFamily="sans-serif-condensed-light"
+        android:hint="@string/confirme_senha"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_registerSenha" />
+
+    <Button
+        android:id="@+id/btn_registrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/login_button"
+        android:text="@string/btn_registrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_registerSenha" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

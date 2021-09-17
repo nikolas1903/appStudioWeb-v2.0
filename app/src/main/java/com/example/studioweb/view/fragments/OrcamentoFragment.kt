@@ -68,7 +68,8 @@ class OrcamentoFragment : Fragment() {
         // Listener botão de Enviar Form
         binding.btnEnviarOrcamento.setOnClickListener {
             val nome = binding.etNome.text.toString()
-            val cpf = binding.etCpf.text.toString()
+            val cpfInvalido = binding.etCpf.text.toString()
+            val cpf = cpfInvalido.replace(".", "").replace("-", "")
             val telefone = binding.etTelefone.text.toString()
             val email = binding.etEmail.text.toString()
             val ramo = binding.etRamo.text.toString()
@@ -101,7 +102,8 @@ class OrcamentoFragment : Fragment() {
                 templatesArray.add("London")
             }
 
-            val templates = templatesArray.toString()
+            val templatesIncorreto = templatesArray.toString()
+            val templates = templatesIncorreto.replace("[", "").replace("]", "")
 
 
             if (ramo.isEmpty() || nomeEmpresa.isEmpty()) {

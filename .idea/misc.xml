@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/background.xml" value="0.30512820512820515" />
+        <entry key="app/src/main/res/drawable/btn_orcamentos.xml" value="0.30512820512820515" />
         <entry key="app/src/main/res/drawable/button_editar.xml" value="0.30512820512820515" />
         <entry key="app/src/main/res/drawable/custom_dialog.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/login_button.xml" value="0.30512820512820515" />
@@ -20,7 +21,7 @@
         <entry key="app/src/main/res/layout/content_inicio.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/content_orcamento.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.2918803418803419" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2918803418803419" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.6898288016112789" />
         <entry key="app/src/main/res/layout/fragment_meus_orcamentos.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/fragment_orcamento.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.2918803418803419" />
@@ -28,6 +29,8 @@
         <entry key="app/src/main/res/layout/item_view.xml" value="0.5" />
         <entry key="app/src/main/res/layout/nav_header_inicio.xml" value="0.5" />
         <entry key="app/src/main/res/layout/nav_header_orcamento.xml" value="0.2918803418803419" />
+        <entry key="app/src/main/res/layout/row_orcamento.xml" value="0.9" />
+        <entry key="app/src/main/res/layout/row_orcamentos.xml" value="0.67" />
         <entry key="app/src/main/res/layout/todos_usuarios_fragment.xml" value="0.15897435897435896" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
         <entry key="app/src/main/res/menu/orcamento.xml" value="0.2918803418803419" />

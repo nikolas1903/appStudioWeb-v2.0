@@ -44,7 +44,6 @@
     <string name="nascimento">Nascimento</string>
     <string name="cpf">CPF</string>
 
-
     <string name="template_vegas">Las Vegas</string>
     <string name="template_paris">Paris</string>
     <string name="template_madrid">Madrid</string>
@@ -52,11 +51,7 @@
     <string name="template_veneza">Veneza</string>
     <string name="template_london">London</string>
 
-
-
-
     <string name="versao_app">Versão do Aplicativo</string>
-
 
     <string name="btn_acessar">Acessar</string>
     <string name="btn_registrar">Registrar</string>
@@ -72,7 +67,9 @@
     <string name="menu_realizar_orcamento">Realizar Orçamento</string>
     <string name="menu_meus_orcamentos">Meus Orçamentos</string>
     <string name="menu_todos_usuarios">Todos Usuários (Para Admins)</string>
-    <string name="orcamento_para">Orçamento para:</string>
+    <string name="orcamento_para">Orçamento para: </string>
     <string name="empresa">Empresa</string>
-
+    <string name="sem_orcamentos">Você não possui orçamentos!\nRealize um agora mesmo!</string>
+    <string name="status">status</string>
+    <string name="editar">editar</string>
 </resources>

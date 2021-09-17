@@ -12,8 +12,8 @@ import com.example.studioweb.services.repository.local.SecurityPreferences
 import com.example.studioweb.services.repository.local.UserRepositoryDB
 import com.example.studioweb.services.repository.models.UserLoginModelDB
 import com.example.studioweb.services.repository.models.UserModelAPI
-import com.example.studioweb.services.repository.remote.generics.BaseResponse
-import com.example.studioweb.services.repository.remote.UserRepositoryAPI
+import com.example.studioweb.services.repository.remote.user.generics.BaseResponse
+import com.example.studioweb.services.repository.remote.user.UserRepositoryAPI
 
 @SuppressLint("StaticFieldLeak")
 class EditUserViewModel(application: Application) : AndroidViewModel(application) {

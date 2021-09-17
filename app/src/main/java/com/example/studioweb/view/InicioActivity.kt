@@ -18,9 +18,7 @@ import com.example.studioweb.R
 import com.example.studioweb.constants.SharedPreferencesConstants
 import com.example.studioweb.services.repository.local.SecurityPreferences
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.activity_user.*
 import kotlinx.android.synthetic.main.fragment_home.*
-import org.w3c.dom.Text
 
 
 class InicioActivity : AppCompatActivity() {

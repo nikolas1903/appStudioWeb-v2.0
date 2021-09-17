@@ -1,18 +1,8 @@
 package com.example.studioweb.services.repository.sync
 
 import android.app.Application
-import android.os.Handler
-import android.os.Looper
-import android.widget.Toast
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.example.studioweb.services.repository.local.UserRepositoryDB
-import com.example.studioweb.services.repository.models.UserUpdateModel
-import com.example.studioweb.services.repository.remote.UserRepositoryAPI
-import com.google.gson.Gson
-import org.json.JSONObject
-
-import org.json.JSONArray
+import com.example.studioweb.services.repository.remote.user.UserRepositoryAPI
 
 /**
  * Classe que sincroniza os dados alterados do usuário no banco com o servidor.

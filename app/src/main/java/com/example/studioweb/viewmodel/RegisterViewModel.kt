@@ -7,8 +7,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.studioweb.listener.APIListener
 import com.example.studioweb.services.repository.models.UserModelAPI
-import com.example.studioweb.services.repository.remote.UserRepositoryAPI
-import com.example.studioweb.services.repository.remote.generics.BaseResponse
+import com.example.studioweb.services.repository.remote.user.UserRepositoryAPI
+import com.example.studioweb.services.repository.remote.user.generics.BaseResponse
 
 class RegisterViewModel(application: Application) : AndroidViewModel(application) {
     private val mUserRepositoryAPI = UserRepositoryAPI()

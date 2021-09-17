@@ -16,7 +16,6 @@ import com.example.studioweb.services.repository.sync.SyncData
 import com.example.studioweb.view.utils.CpfMaskTv
 import com.example.studioweb.view.utils.DataMaskTv
 import com.example.studioweb.view.utils.TelefoneMaskTv
-import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.activity_user.*
 import kotlinx.android.synthetic.main.activity_user.image_back
 import java.time.LocalDate

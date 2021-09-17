@@ -6,9 +6,9 @@ import android.content.SharedPreferences
 /**
  * Classe responsável pela configuração do SharedPreferences
  */
-class SecurityPreferences (context: Context){
+class SecurityPreferences(context: Context?){
     private val mPreferences: SharedPreferences =
-        context.getSharedPreferences("users", Context.MODE_PRIVATE)
+        context!!.getSharedPreferences("users", Context.MODE_PRIVATE)
 
     fun store(key: String, value: String) {
         mPreferences.edit().putString(key, value).apply()

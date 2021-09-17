@@ -13,7 +13,7 @@ class RetrofitClient private constructor() {
         private const val baseUrl = "https://treinamento-api-si.herokuapp.com/"
         private fun getRetrofitInstance(): Retrofit {
             val httpClient = OkHttpClient.Builder()
-            if (!::retrofit.isInitialized) {
+            if (!Companion::retrofit.isInitialized) {
                 retrofit = Retrofit.Builder()
                     .baseUrl(baseUrl)
                     .client(httpClient.build())

@@ -17,84 +17,92 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/et_editNome"
+            android:id="@+id/et_nome"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="26dp"
-            android:layout_marginRight="26dp"
             android:layout_marginTop="8dp"
+            android:layout_marginRight="26dp"
             android:backgroundTint="@color/white"
+            android:clickable="false"
             android:drawableLeft="@drawable/ic_person"
             android:drawablePadding="10dp"
             android:drawableTint="@color/white"
+            android:editable="false"
             android:fontFamily="sans-serif-condensed-light"
             android:hint="@string/digite_nome"
-            android:inputType="textPersonName"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:inputType="none"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/et_editCpf"
+            android:id="@+id/et_cpf"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="26dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="26dp"
             android:backgroundTint="@color/white"
+            android:clickable="false"
             android:drawableLeft="@drawable/ic_card"
             android:drawablePadding="10dp"
             android:drawableTint="@color/white"
+            android:editable="false"
             android:fontFamily="sans-serif-condensed-light"
             android:hint="@string/digite_cpf"
-            android:inputType="number"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:inputType="none"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_editNome" />
+            app:layout_constraintTop_toBottomOf="@id/et_nome" />
 
         <EditText
-            android:id="@+id/et_editTelefone"
+            android:id="@+id/et_telefone"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="26dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="26dp"
             android:backgroundTint="@color/white"
+            android:clickable="false"
             android:drawableLeft="@drawable/ic_phone"
             android:drawablePadding="10dp"
             android:drawableTint="@color/white"
+            android:editable="false"
             android:fontFamily="sans-serif-condensed-light"
             android:hint="@string/digite_telefone"
-            android:inputType="phone"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:inputType="none"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_editCpf" />
+            app:layout_constraintTop_toBottomOf="@id/et_cpf" />
 
         <EditText
-            android:id="@+id/et_editEmail"
+            android:id="@+id/et_email"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="26dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="26dp"
             android:backgroundTint="@color/white"
+            android:clickable="false"
             android:drawableLeft="@drawable/ic_email"
             android:drawablePadding="10dp"
             android:drawableTint="@color/white"
+            android:editable="false"
             android:fontFamily="sans-serif-condensed-light"
             android:hint="@string/digite_email"
-            android:inputType="textEmailAddress"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:inputType="none"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_editTelefone" />
+            app:layout_constraintTop_toBottomOf="@id/et_telefone" />
 
         <EditText
             android:id="@+id/et_ramo"
@@ -107,14 +115,15 @@
             android:drawableLeft="@drawable/ic_ramo"
             android:drawablePadding="10dp"
             android:drawableTint="@color/white"
+            android:focusable="true"
             android:fontFamily="sans-serif-condensed-light"
             android:hint="@string/digite_ramo"
-            android:inputType="date"
+            android:inputType="textCapWords"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_editEmail" />
+            app:layout_constraintTop_toBottomOf="@id/et_email" />
 
         <EditText
             android:id="@+id/et_nomeEmpresa"
@@ -129,7 +138,7 @@
             android:drawableTint="@color/white"
             android:fontFamily="sans-serif-condensed-light"
             android:hint="@string/digite_nomeEmpresa"
-            android:inputType="textPassword"
+            android:inputType="textCapWords"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -149,70 +158,74 @@
             app:layout_constraintTop_toBottomOf="@id/et_nomeEmpresa" />
 
         <CheckBox
-            android:id="@+id/template1"
+            android:id="@+id/check_losAngeles"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
             android:fontFamily="sans-serif-condensed-light"
-            android:text="Template A"
+            android:text="@string/template_losangeles"
             android:textColor="@color/white"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_templates" />
 
         <CheckBox
-            android:id="@+id/template2"
+            android:id="@+id/check_vegas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:buttonTint="@color/white"
             android:fontFamily="sans-serif-condensed-light"
-            android:text="Template B"
+            android:text="@string/template_vegas"
             android:textColor="@color/white"
-            app:layout_constraintLeft_toRightOf="@id/template1"
+            app:layout_constraintLeft_toRightOf="@id/check_losAngeles"
             app:layout_constraintTop_toBottomOf="@id/tv_templates" />
 
         <CheckBox
-            android:id="@+id/template3"
+            android:id="@+id/check_paris"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
             android:fontFamily="sans-serif-condensed-light"
-            android:text="Template C"
+            android:text="@string/template_paris"
             android:textColor="@color/white"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/template2" />
+            app:layout_constraintTop_toBottomOf="@id/check_losAngeles" />
 
         <CheckBox
-            android:id="@+id/template4"
+            android:id="@+id/check_madrid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:buttonTint="@color/white"
             android:fontFamily="sans-serif-condensed-light"
-            android:text="Template D"
+            android:text="@string/template_madrid"
             android:textColor="@color/white"
-            app:layout_constraintLeft_toRightOf="@id/template3"
-            app:layout_constraintTop_toBottomOf="@id/template2" />
+            app:layout_constraintLeft_toLeftOf="@id/check_vegas"
+            app:layout_constraintTop_toBottomOf="@id/check_vegas" />
 
         <CheckBox
-            android:id="@+id/template5"
+            android:id="@+id/check_veneza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
             android:fontFamily="sans-serif-condensed-light"
-            android:text="Template E"
+            android:text="@string/template_veneza"
             android:textColor="@color/white"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/template4" />
+            app:layout_constraintTop_toBottomOf="@id/check_paris" />
 
         <CheckBox
-            android:id="@+id/template6"
+            android:id="@+id/check_london"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:buttonTint="@color/white"
             android:fontFamily="sans-serif-condensed-light"
-            android:text="Template F"
+            android:text="@string/template_london"
             android:textColor="@color/white"
-            app:layout_constraintLeft_toRightOf="@id/template5"
-            app:layout_constraintTop_toBottomOf="@id/template4" />
+            app:layout_constraintLeft_toLeftOf="@id/check_vegas"
+            app:layout_constraintTop_toBottomOf="@id/check_madrid" />
 
         <Button
-            android:id="@+id/btn_enviar"
+            android:id="@+id/btn_enviarOrcamento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -222,7 +235,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/template6" />
+            app:layout_constraintTop_toBottomOf="@id/check_london" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

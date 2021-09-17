@@ -14,7 +14,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_orcamento.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.35572916666666665" />
-        <entry key="app/src/main/res/layout/activity_user.xml" value="0.595" />
+        <entry key="app/src/main/res/layout/activity_user.xml" value="0.5" />
         <entry key="app/src/main/res/layout/app_bar_inicio.xml" value="0.15897435897435896" />
         <entry key="app/src/main/res/layout/app_bar_orcamento.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/content_inicio.xml" value="0.2918803418803419" />
@@ -25,6 +25,7 @@
         <entry key="app/src/main/res/layout/fragment_orcamento.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/fragment_todos_usuarios.xml" value="0.2918803418803419" />
+        <entry key="app/src/main/res/layout/item_view.xml" value="0.5" />
         <entry key="app/src/main/res/layout/nav_header_inicio.xml" value="0.5" />
         <entry key="app/src/main/res/layout/nav_header_orcamento.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/todos_usuarios_fragment.xml" value="0.15897435897435896" />

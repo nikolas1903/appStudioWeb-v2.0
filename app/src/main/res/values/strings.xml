@@ -72,4 +72,6 @@
     <string name="sem_orcamentos">Você não possui orçamentos!\nRealize um agora mesmo!</string>
     <string name="status">status</string>
     <string name="editar">editar</string>
+    <string name="orcamento_finalizado">Orçamento Finalizado!</string>
+    <string name="orcamento_pendente">Orçamento Pendente</string>
 </resources>

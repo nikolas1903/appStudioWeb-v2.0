@@ -1,8 +1,12 @@
 package com.example.studioweb.view
 
+import android.app.Activity
+import android.content.ContentValues
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.widget.Toast
@@ -20,15 +24,24 @@ import kotlinx.android.synthetic.main.activity_user.*
 import kotlinx.android.synthetic.main.activity_user.image_back
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
+import androidx.core.app.ActivityCompat.startActivityForResult
+
+
+
 
 class UserActivity : AppCompatActivity() {
     private lateinit var mConnectionLiveData: ConnectionLiveData
     private lateinit var mSecurityPreferences: SecurityPreferences
     private lateinit var mSyncData : SyncData
 
+
+    private var mImageUri: Uri? = null
+
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         //Removendo ActionBar
         supportActionBar?.hide()
         setContentView(R.layout.activity_user)
@@ -115,5 +128,15 @@ class UserActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        //Listener do Editar Foto
+        img_trocaFoto.setOnClickListener {
+            openGalleryForImage()
+        }
+    }
+
+    private fun openGalleryForImage() {
+        val intent = Intent(Intent.ACTION_PICK)
+        startActivity(intent)
     }
 }

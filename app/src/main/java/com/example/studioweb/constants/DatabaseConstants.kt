@@ -15,6 +15,7 @@ class DatabaseConstants private constructor() {
             const val RESPONSE_EMAIL = "response_email"
             const val RESPONSE_TELEFONE = "response_telefone"
             const val RESPONSE_NASCIMENTO = "response_nascimento"
+            const val IMAGEM_PERFIL = "imagem_perfil"
             const val IS_SYNC = "is_sync"
         }
     }

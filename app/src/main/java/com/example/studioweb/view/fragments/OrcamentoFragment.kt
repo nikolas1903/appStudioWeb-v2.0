@@ -30,8 +30,6 @@ class OrcamentoFragment : Fragment() {
 
         mSecurityPreferences = SecurityPreferences(context)
 
-
-
         binding.etCpf.addTextChangedListener(CpfMask.mask("###.###.###-##", binding.etCpf))
         binding.etTelefone.addTextChangedListener(TelefoneMask.insert("(##)#####-####", binding.etTelefone))
 

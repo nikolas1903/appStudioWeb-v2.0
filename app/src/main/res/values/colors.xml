@@ -12,6 +12,10 @@
     <color name="colorBackgroundLogin2">#2F044E</color>
     <color name="colorBackgroundOffline">#4E040D</color>
 
+
+    <color name="rightColor">#49D346</color>
+    <color name="pendenteColor">#FFEB3B</color>
+
 <!-- Cores Pré-Estabelecidas pelo Sistema -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>

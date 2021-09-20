@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.studioweb.R
 import com.example.studioweb.services.repository.models.OrcamentoModelAPI
+import kotlinx.android.synthetic.main.row_orcamento.view.*
 
 class OrcamentoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(orcamento: OrcamentoModelAPI.OrcamentoResponse) {
@@ -23,8 +24,9 @@ class OrcamentoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val btnStatus = itemView.findViewById<Button>(R.id.btn_status)
         btnStatus.setOnClickListener {
             val status = orcamento.status
+            val id = orcamento.id
             AlertDialog.Builder(itemView.context)
-                .setTitle("Informação sobre Orçamento")
+                .setTitle("Informação sobre orçamento: $id")
                 .setMessage("Status: $status")
                 .setNeutralButton("OK", null)
                 .show()
@@ -53,6 +55,23 @@ class OrcamentoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         } else {
             quaisTemplates.visibility = VISIBLE
             templates.visibility = VISIBLE
+        }
+
+        val status = orcamento.status
+        if (status == "Finalizado") {
+            itemView.img_finalizado.visibility = VISIBLE
+            itemView.tv_finalizado.visibility = VISIBLE
+        } else {
+            itemView.img_finalizado.visibility = GONE
+            itemView.tv_finalizado.visibility = GONE
+        }
+
+        if (status == "Recebido") {
+            itemView.img_pendente.visibility = VISIBLE
+            itemView.tv_pendente.visibility = VISIBLE
+        } else {
+            itemView.img_pendente.visibility = GONE
+            itemView.tv_pendente.visibility = GONE
         }
     }
 }

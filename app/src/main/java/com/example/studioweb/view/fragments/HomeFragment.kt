@@ -8,19 +8,25 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.studioweb.constants.SharedPreferencesConstants
 import com.example.studioweb.databinding.FragmentHomeBinding
+import com.example.studioweb.services.repository.local.SecurityPreferences
 import com.example.studioweb.viewmodel.HomeViewModel
 
 class HomeFragment : Fragment() {
     private lateinit var mHomeViewModel: HomeViewModel
+    private lateinit var mSecurityPreferences: SecurityPreferences
     private var _binding: FragmentHomeBinding? = null
 
     private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, s: Bundle?): View {
         mHomeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        mSecurityPreferences = SecurityPreferences(context)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        binding.tvNomeHome.text = mSecurityPreferences.get(SharedPreferencesConstants.SHARED.NOME)
 
         setListeners()
 

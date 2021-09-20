@@ -4,13 +4,57 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <ImageView
+        android:id="@+id/img_finalizado"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_success"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/rightColor" />
+
+    <TextView
+        android:id="@+id/tv_finalizado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/orcamento_finalizado"
+        android:textColor="@color/white"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@id/img_finalizado"
+        app:layout_constraintRight_toLeftOf="@id/img_finalizado"
+        app:layout_constraintTop_toTopOf="@id/img_finalizado" />
+
+    <ImageView
+        android:id="@+id/img_pendente"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_pendente"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/pendenteColor" />
+
+    <TextView
+        android:id="@+id/tv_pendente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/orcamento_pendente"
+        android:textColor="@color/white"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@id/img_pendente"
+        app:layout_constraintRight_toLeftOf="@id/img_pendente"
+        app:layout_constraintTop_toTopOf="@id/img_pendente" />
+
     <TextView
         android:id="@+id/tv_orcamentoPara"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="@string/orcamento_para"
         android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/orcamento_para"
+        android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,8 +73,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed-light"
-        android:textColor="@color/white"
         android:text="Empresa:"
+        android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_orcamentoPara" />
 
@@ -38,10 +82,10 @@
         android:id="@+id/tv_empresaOrcamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:textColor="@color/white"
         android:layout_marginStart="6dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/empresa"
+        android:textColor="@color/white"
         app:layout_constraintLeft_toRightOf="@id/tv_paraEmpresa"
         app:layout_constraintTop_toBottomOf="@id/tv_nomeOrcamento" />
 
@@ -50,8 +94,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed-light"
-        android:textColor="@color/white"
         android:text="@string/templates_preferidos"
+        android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_paraEmpresa" />
 
@@ -59,11 +103,11 @@
         android:id="@+id/tv_templatesOrcamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed-medium"
         android:layout_marginStart="6dp"
-        android:textColor="@color/white"
         android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/templates_preferidos"
+        android:textColor="@color/white"
         app:layout_constraintLeft_toRightOf="@id/tv_templatesFavs"
         app:layout_constraintTop_toBottomOf="@id/tv_empresaOrcamento" />
 
@@ -71,12 +115,12 @@
         android:id="@+id/btn_status"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:textSize="12sp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="58dp"
         android:background="@drawable/button_editar"
         android:text="@string/status"
+        android:textSize="12sp"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/btn_editarOrcamento"
@@ -86,16 +130,17 @@
         android:id="@+id/btn_editarOrcamento"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:textSize="12sp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/button_editar"
         android:text="@string/editar"
+        android:textSize="12sp"
         app:layout_constraintLeft_toRightOf="@id/btn_status"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_templatesOrcamento" />
 
     <View
+        android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginTop="8dp"

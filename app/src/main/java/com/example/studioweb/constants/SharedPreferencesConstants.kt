@@ -11,5 +11,6 @@ class SharedPreferencesConstants private constructor() {
         const val CPF = "cpf"
         const val NASCIMENTO = "nascimento"
         const val TELEFONE = "telefone"
+        const val IMAGEM = "imagem"
     }
 }

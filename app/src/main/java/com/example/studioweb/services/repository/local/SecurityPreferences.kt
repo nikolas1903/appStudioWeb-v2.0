@@ -14,6 +14,10 @@ class SecurityPreferences(context: Context?){
         mPreferences.edit().putString(key, value).apply()
     }
 
+    fun storeImage(key: String, value: ByteArray?) {
+        mPreferences.edit().putString(key, value.toString()).apply()
+    }
+
     fun get(key: String) : String {
         return mPreferences.getString(key, "") ?: ""
     }

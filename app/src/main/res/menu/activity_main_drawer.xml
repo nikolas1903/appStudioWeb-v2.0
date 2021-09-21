@@ -16,9 +16,5 @@
             android:id="@+id/nav_meusOrcamentos"
             android:icon="@drawable/ic_orcamentos"
             android:title="@string/menu_meus_orcamentos" />
-        <item
-            android:id="@+id/nav_todosUsuarios"
-            android:icon="@drawable/ic_person"
-            android:title="@string/menu_todos_usuarios" />
     </group>
 </menu>

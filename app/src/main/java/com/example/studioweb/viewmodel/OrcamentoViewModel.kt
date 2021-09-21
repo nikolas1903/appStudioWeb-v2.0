@@ -21,14 +21,6 @@ class OrcamentoViewModel(application: Application) : AndroidViewModel(applicatio
         send(nome, cpf, telefone, email, ramo, nomeEmpresa, templates, object : APIListenerOrcamento {
             override fun onSuccess(modelAPI: OrcamentoModelAPI.OrcamentoResponse) {
                 // Salvando resposta da API
-                val responseNome = modelAPI.nome
-                val responseCpf = modelAPI.cpf
-                val responseTelefone = modelAPI.telefone
-                val responseEmail = modelAPI.email
-                val responseRamo = modelAPI.ramo
-                val responseEmpresa = modelAPI.empresa
-                val responseStatus = modelAPI.status
-
                 mCreateOrcamento.value = true
             }
 

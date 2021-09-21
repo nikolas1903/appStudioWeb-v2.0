@@ -6,6 +6,12 @@ import android.content.Context
 import com.example.studioweb.constants.DatabaseConstants
 import com.example.studioweb.services.repository.models.UserLoginModelDB
 import com.example.studioweb.services.repository.models.UserUpdateModel
+import java.sql.Blob
+import java.sql.ResultSet
+import android.graphics.BitmapFactory
+
+import android.graphics.Bitmap
+
 
 class UserRepositoryDB private constructor(context: Context) {
     private var mUserDatabaseHelper: UserDatabaseHelper = UserDatabaseHelper(context)
@@ -37,8 +43,14 @@ class UserRepositoryDB private constructor(context: Context) {
             contentValues.put(DatabaseConstants.USER.COLUMNS.RESPONSE_NOME, user.responseNome)
             contentValues.put(DatabaseConstants.USER.COLUMNS.RESPONSE_CPF, user.responseCpf)
             contentValues.put(DatabaseConstants.USER.COLUMNS.RESPONSE_EMAIL, user.responseEmail)
-            contentValues.put(DatabaseConstants.USER.COLUMNS.RESPONSE_TELEFONE, user.responseTelefone)
-            contentValues.put(DatabaseConstants.USER.COLUMNS.RESPONSE_NASCIMENTO, user.responseNascimento)
+            contentValues.put(
+                DatabaseConstants.USER.COLUMNS.RESPONSE_TELEFONE,
+                user.responseTelefone
+            )
+            contentValues.put(
+                DatabaseConstants.USER.COLUMNS.RESPONSE_NASCIMENTO,
+                user.responseNascimento
+            )
             contentValues.put(DatabaseConstants.USER.COLUMNS.IS_SYNC, user.isSync)
 
             db.insert(DatabaseConstants.USER.TABLE_NAME, null, contentValues)
@@ -111,7 +123,8 @@ class UserRepositoryDB private constructor(context: Context) {
                         responseEmail,
                         responseTelefone,
                         responseNascimento,
-                        isSync)
+                        isSync
+                    )
                 }
             }
 
@@ -123,26 +136,66 @@ class UserRepositoryDB private constructor(context: Context) {
     }
 
 
+    @ExperimentalUnsignedTypes
+    @SuppressLint("Range")
+    fun getProfilePic(cpf: String): Bitmap? {
+        var bitmap: Bitmap? = null
+        return try {
+            val db = mUserDatabaseHelper.readableDatabase
+            val cursor = db.rawQuery(
+                "SELECT imagem_perfil FROM logged_users WHERE response_cpf = ?",
+                arrayOf(cpf)
+            )
+
+            if (cursor != null && cursor.count > 0) {
+                while (cursor.moveToNext()) {
+                    val image =
+                        cursor.getBlob(cursor.getColumnIndex(DatabaseConstants.USER.COLUMNS.IMAGEM_PERFIL))
+                    image.toUByteArray()
+                    bitmap = BitmapFactory.decodeByteArray(image, 0, image.size)
+                }
+            }
+            cursor?.close()
+            bitmap
+        } catch (e: Exception) {
+            bitmap
+        }
+    }
+
+
     /**
      * Procura todos os usuários que ainda não foram sincronizados com a API.
      */
     @SuppressLint("Range")
-    fun getUnsyncUsers() : List<UserUpdateModel> {
-        val list : MutableList<UserUpdateModel> = ArrayList()
+    fun getUnsyncUsers(): List<UserUpdateModel> {
+        val list: MutableList<UserUpdateModel> = ArrayList()
         return try {
             val db = mUserDatabaseHelper.readableDatabase
             val cursor = db.rawQuery("SELECT * FROM logged_users WHERE is_sync = 0", null)
 
-            if(cursor != null && cursor.count > 0) {
-                while (cursor.moveToNext()){
-                    val cpf = cursor.getString(cursor.getColumnIndex(DatabaseConstants.USER.COLUMNS.CPF))
-                    val senha = cursor.getString(cursor.getColumnIndex(DatabaseConstants.USER.COLUMNS.SENHA))
-                    val responseNome = cursor.getString(cursor.getColumnIndex(DatabaseConstants.USER.COLUMNS.RESPONSE_NOME))
-                    val responseEmail = cursor.getString(cursor.getColumnIndex(DatabaseConstants.USER.COLUMNS.RESPONSE_EMAIL))
-                    val responseTelefone = cursor.getString(cursor.getColumnIndex(DatabaseConstants.USER.COLUMNS.RESPONSE_TELEFONE))
-                    val responseNascimento = cursor.getString(cursor.getColumnIndex(DatabaseConstants.USER.COLUMNS.RESPONSE_NASCIMENTO))
+            if (cursor != null && cursor.count > 0) {
+                while (cursor.moveToNext()) {
+                    val cpf =
+                        cursor.getString(cursor.getColumnIndex(DatabaseConstants.USER.COLUMNS.CPF))
+                    val senha =
+                        cursor.getString(cursor.getColumnIndex(DatabaseConstants.USER.COLUMNS.SENHA))
+                    val responseNome =
+                        cursor.getString(cursor.getColumnIndex(DatabaseConstants.USER.COLUMNS.RESPONSE_NOME))
+                    val responseEmail =
+                        cursor.getString(cursor.getColumnIndex(DatabaseConstants.USER.COLUMNS.RESPONSE_EMAIL))
+                    val responseTelefone =
+                        cursor.getString(cursor.getColumnIndex(DatabaseConstants.USER.COLUMNS.RESPONSE_TELEFONE))
+                    val responseNascimento =
+                        cursor.getString(cursor.getColumnIndex(DatabaseConstants.USER.COLUMNS.RESPONSE_NASCIMENTO))
 
-                    val user = UserUpdateModel(cpf, responseEmail, responseNascimento, responseNome, senha, responseTelefone)
+                    val user = UserUpdateModel(
+                        cpf,
+                        responseEmail,
+                        responseNascimento,
+                        responseNome,
+                        senha,
+                        responseTelefone
+                    )
                     list.add(user)
                 }
             }
@@ -162,15 +215,22 @@ class UserRepositoryDB private constructor(context: Context) {
             val db = mUserDatabaseHelper.writableDatabase
 
             val userCpf = user.cpf
-            val cpf = userCpf.replace(".", "").replace("-", "") //Substituindo os caractéres invalidos do CPF
+            val cpf = userCpf.replace(".", "")
+                .replace("-", "") //Substituindo os caractéres invalidos do CPF
             val contentValues = ContentValues()
             contentValues.put(DatabaseConstants.USER.COLUMNS.CPF, cpf)
             contentValues.put(DatabaseConstants.USER.COLUMNS.SENHA, user.senha)
             contentValues.put(DatabaseConstants.USER.COLUMNS.RESPONSE_NOME, user.responseNome)
             contentValues.put(DatabaseConstants.USER.COLUMNS.RESPONSE_CPF, user.responseCpf)
             contentValues.put(DatabaseConstants.USER.COLUMNS.RESPONSE_EMAIL, user.responseEmail)
-            contentValues.put(DatabaseConstants.USER.COLUMNS.RESPONSE_TELEFONE, user.responseTelefone)
-            contentValues.put(DatabaseConstants.USER.COLUMNS.RESPONSE_NASCIMENTO, user.responseNascimento)
+            contentValues.put(
+                DatabaseConstants.USER.COLUMNS.RESPONSE_TELEFONE,
+                user.responseTelefone
+            )
+            contentValues.put(
+                DatabaseConstants.USER.COLUMNS.RESPONSE_NASCIMENTO,
+                user.responseNascimento
+            )
 
             val selection = DatabaseConstants.USER.COLUMNS.CPF + " = ?"
             val args = arrayOf(cpf)
@@ -201,6 +261,25 @@ class UserRepositoryDB private constructor(context: Context) {
             val args = arrayOf(cpf)
 
             db.update(DatabaseConstants.USER.TABLE_NAME, contentValues, selection, args)
+            true
+        } catch (e: Exception) {
+            false
+        }
+    }
+
+    fun updateProfilePic(userCpf: String, image: ByteArray?): Boolean {
+        return try {
+            val db = mUserDatabaseHelper.writableDatabase
+
+            val cpf = userCpf.replace(".", "").replace("-", "")
+
+            val contentValues = ContentValues()
+            contentValues.put(DatabaseConstants.USER.COLUMNS.IMAGEM_PERFIL, image)
+
+            val selection = DatabaseConstants.USER.COLUMNS.CPF + " = ?"
+            val args = arrayOf(cpf)
+            db.update(DatabaseConstants.USER.TABLE_NAME, contentValues, selection, args)
+
             true
         } catch (e: Exception) {
             false

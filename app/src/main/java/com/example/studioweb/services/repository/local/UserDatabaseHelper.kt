@@ -38,6 +38,7 @@ class UserDatabaseHelper(context: Context) :
                     + DatabaseConstants.USER.COLUMNS.RESPONSE_EMAIL + " text, "
                     + DatabaseConstants.USER.COLUMNS.RESPONSE_TELEFONE + " text, "
                     + DatabaseConstants.USER.COLUMNS.RESPONSE_NASCIMENTO + " text, "
+                    + DatabaseConstants.USER.COLUMNS.IMAGEM_PERFIL + " blob, "
                     + DatabaseConstants.USER.COLUMNS.IS_SYNC + " text);")
     }
 }

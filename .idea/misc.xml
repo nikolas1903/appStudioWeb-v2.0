@@ -4,12 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/background.xml" value="0.30512820512820515" />
+        <entry key="app/src/main/res/drawable/background_dialog_edit.xml" value="0.30512820512820515" />
+        <entry key="app/src/main/res/drawable/background_login.xml" value="0.30512820512820515" />
         <entry key="app/src/main/res/drawable/btn_orcamentos.xml" value="0.30512820512820515" />
         <entry key="app/src/main/res/drawable/button_editar.xml" value="0.30512820512820515" />
         <entry key="app/src/main/res/drawable/custom_dialog.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/login_button.xml" value="0.30512820512820515" />
+        <entry key="app/src/main/res/font/acme.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/layout-v21/activity_login.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/activity_admin_panel.xml" value="0.2918803418803419" />
+        <entry key="app/src/main/res/layout/activity_edit_orcamento.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/activity_edit_user.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
@@ -20,6 +24,7 @@
         <entry key="app/src/main/res/layout/app_bar_orcamento.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/content_inicio.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/content_orcamento.xml" value="0.2918803418803419" />
+        <entry key="app/src/main/res/layout/dialog_edit_orcamento.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.2918803418803419" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.6898288016112789" />
         <entry key="app/src/main/res/layout/fragment_meus_orcamentos.xml" value="0.2918803418803419" />

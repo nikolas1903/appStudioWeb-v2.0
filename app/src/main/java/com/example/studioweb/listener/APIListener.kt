@@ -18,4 +18,8 @@ interface APIListenerOrcamentoGet {
     fun onFailure(str: String)
 }
 
+interface APIListenerOrcamentoGetId {
+    fun onSuccess(modelAPI: OrcamentoModelAPI.OrcamentoResponse)
+    fun onFailure(str: String)
+}
 

@@ -2,6 +2,8 @@ package com.example.studioweb.viewmodel
 
 import android.annotation.SuppressLint
 import android.app.Application
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
@@ -14,6 +16,9 @@ import com.example.studioweb.services.repository.models.UserLoginModelDB
 import com.example.studioweb.services.repository.models.UserModelAPI
 import com.example.studioweb.services.repository.remote.user.UserRepositoryAPI
 import com.example.studioweb.services.repository.remote.user.generics.BaseResponse
+import java.io.ByteArrayOutputStream
+import java.util.*
+
 
 @SuppressLint("StaticFieldLeak")
 class LoginViewModel(application: Application) : AndroidViewModel(application) {
@@ -123,6 +128,18 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
         Toast.makeText(getApplication(), modelAPI.mensagem, Toast.LENGTH_SHORT).show()
         mLogin.value = false
 
+    }
+
+     fun updateProfilePic(cpf: String, image: ByteArray?){
+        mUserRepositoryDB.updateProfilePic(cpf, image)
+
+
+         mSharedPreferences.storeImage(SharedPreferencesConstants.SHARED.IMAGEM, image)
+    }
+
+    @ExperimentalUnsignedTypes
+    fun getProfilePic(cpf: String) : Bitmap? {
+       return mUserRepositoryDB.getProfilePic(cpf)
     }
 
 }

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_dialog_edit">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/et_editNome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="26dp"
+            android:backgroundTint="@color/white"
+            android:clickable="false"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:editable="false"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="@string/digite_nome"
+            android:inputType="none"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_editCpf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="26dp"
+            android:backgroundTint="@color/white"
+            android:clickable="false"
+            android:drawableLeft="@drawable/ic_card"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:editable="false"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="@string/digite_cpf"
+            android:inputType="none"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_editNome" />
+
+        <EditText
+            android:id="@+id/et_editTelefone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="26dp"
+            android:backgroundTint="@color/white"
+            android:clickable="false"
+            android:drawableLeft="@drawable/ic_phone"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:editable="false"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="@string/digite_telefone"
+            android:inputType="none"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_editCpf" />
+
+        <EditText
+            android:id="@+id/et_editEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="26dp"
+            android:backgroundTint="@color/white"
+            android:clickable="false"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:editable="false"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="@string/digite_email"
+            android:inputType="none"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_editTelefone" />
+
+        <EditText
+            android:id="@+id/et_editRamo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="26dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_ramo"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:focusable="true"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="@string/digite_ramo"
+            android:inputType="textCapWords"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_editEmail" />
+
+        <EditText
+            android:id="@+id/et_editNomeEmpresa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="26dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_empresa"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="@string/digite_nomeEmpresa"
+            android:inputType="textCapWords"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_editRamo" />
+        <TextView
+            android:id="@+id/tv_templates"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/templates_preferidos"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_editNomeEmpresa" />
+
+        <CheckBox
+            android:id="@+id/check_editLosAngeles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/template_losangeles"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_templates" />
+
+        <CheckBox
+            android:id="@+id/check_editVegas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:buttonTint="@color/white"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/template_vegas"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/check_editLosAngeles"
+            app:layout_constraintTop_toBottomOf="@id/tv_templates" />
+
+        <CheckBox
+            android:id="@+id/check_editParis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/template_paris"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/check_editLosAngeles" />
+
+        <CheckBox
+            android:id="@+id/check_editMadrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/template_madrid"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="@id/check_editVegas"
+            app:layout_constraintTop_toBottomOf="@id/check_editVegas" />
+
+        <CheckBox
+            android:id="@+id/check_editVeneza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/template_veneza"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/check_editParis" />
+
+        <CheckBox
+            android:id="@+id/check_editLondon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/template_london"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="@id/check_editVegas"
+            app:layout_constraintTop_toBottomOf="@id/check_editMadrid" />
+
+        <Button
+            android:id="@+id/btn_editOrcamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/login_button"
+            android:text="@string/enviar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/check_editLondon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,12 +2,14 @@ package com.example.studioweb.services.repository.remote.orcamento
 
 import com.example.studioweb.listener.APIListenerOrcamento
 import com.example.studioweb.listener.APIListenerOrcamentoGet
+import com.example.studioweb.listener.APIListenerOrcamentoGetId
 import com.example.studioweb.services.repository.models.OrcamentoModelAPI
 import com.example.studioweb.services.repository.remote.RetrofitClientOrcamento
 import com.example.studioweb.services.repository.remote.orcamento.request.Orcamento
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.lang.Exception
 
 private val mRemote = RetrofitClientOrcamento.createService(OrcamentoService::class.java)
 
@@ -50,6 +52,49 @@ class OrcamentoRepositoryAPI {
                 listener.onFailure(t.message.toString())
             }
         })
+    }
+
+    fun getOrcamentoById(id: String, listener: APIListenerOrcamentoGetId) {
+        val call: Call<OrcamentoModelAPI.OrcamentoResponse> = mRemote.getOrcamentoId(id)
+        call.enqueue(object : Callback<OrcamentoModelAPI.OrcamentoResponse> {
+            override fun onResponse(
+                call: Call<OrcamentoModelAPI.OrcamentoResponse>,
+                response: Response<OrcamentoModelAPI.OrcamentoResponse>
+            ) {
+                response.body()?.let { listener.onSuccess(it) }
+            }
+
+            override fun onFailure(call: Call<OrcamentoModelAPI.OrcamentoResponse>, t: Throwable) {
+                listener.onFailure(t.message.toString())
+            }
+
+        })
+    }
+
+    fun updateOrcamentoById(id: String, nome: String, cpf: String, telefone: String, email: String, ramo: String, empresa: String, templates: String, status: String, listener: APIListenerOrcamento) {
+        val orcamento = Orcamento.EnviarOrcamento()
+        orcamento.nome = nome
+        orcamento.cpf = cpf
+        orcamento.telefone = telefone
+        orcamento.email = email
+        orcamento.ramo = ramo
+        orcamento.empresa = empresa
+        orcamento.status = status
+        orcamento.templates = templates
+
+        val call: Call<OrcamentoModelAPI.OrcamentoResponse> = mRemote.updateOrcamentoId(orcamento, id)
+        call.enqueue(object : Callback<OrcamentoModelAPI.OrcamentoResponse>{
+            override fun onResponse(
+                call: Call<OrcamentoModelAPI.OrcamentoResponse>, response: Response<OrcamentoModelAPI.OrcamentoResponse>) {
+                response.body()?.let { listener.onSuccess(it) }
+            }
+
+            override fun onFailure(
+                call: Call<OrcamentoModelAPI.OrcamentoResponse>, t: Throwable) {
+                listener.onFailure(t.message.toString())
+            }
+        })
+
     }
 
 }

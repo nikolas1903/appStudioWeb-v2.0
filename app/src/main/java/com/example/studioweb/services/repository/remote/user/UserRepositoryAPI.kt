@@ -1,13 +1,16 @@
 package com.example.studioweb.services.repository.remote.user
 
 import com.example.studioweb.listener.APIListener
+import com.example.studioweb.services.repository.models.OrcamentoModelAPI
 import com.example.studioweb.services.repository.models.UserModelAPI
+import com.example.studioweb.services.repository.models.UserUpdateModel
 import com.example.studioweb.services.repository.remote.RetrofitClient
 import com.example.studioweb.services.repository.remote.user.generics.BaseResponse
 import com.example.studioweb.services.repository.remote.user.request.User
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.lang.Exception
 
 class UserRepositoryAPI {
 
@@ -25,11 +28,17 @@ class UserRepositoryAPI {
 
         val call: Call<BaseResponse<UserModelAPI.LoginResponse>> = mRemote.login(login)
         call.enqueue(object : Callback<BaseResponse<UserModelAPI.LoginResponse>> {
-            override fun onResponse(call: Call<BaseResponse<UserModelAPI.LoginResponse>>, response: Response<BaseResponse<UserModelAPI.LoginResponse>>) {
+            override fun onResponse(
+                call: Call<BaseResponse<UserModelAPI.LoginResponse>>,
+                response: Response<BaseResponse<UserModelAPI.LoginResponse>>
+            ) {
                 response.body()?.let { listener.onSuccess(it) }
             }
 
-            override fun onFailure(call: Call<BaseResponse<UserModelAPI.LoginResponse>>, t: Throwable) {
+            override fun onFailure(
+                call: Call<BaseResponse<UserModelAPI.LoginResponse>>,
+                t: Throwable
+            ) {
                 listener.onFailure(t.message.toString())
             }
         })
@@ -43,7 +52,15 @@ class UserRepositoryAPI {
      * fazendo um mRemote.register, que é um Post no UserService,
      * e então registrando o usuário.
      */
-    fun create(nome: String, cpf: String, email: String, telefone: String, nascimento: String, senha: String, listener: APIListener) {
+    fun create(
+        nome: String,
+        cpf: String,
+        email: String,
+        telefone: String,
+        nascimento: String,
+        senha: String,
+        listener: APIListener
+    ) {
         val register = User.Register()
         register.nome = nome
         register.email = email
@@ -54,11 +71,17 @@ class UserRepositoryAPI {
 
         val call: Call<BaseResponse<UserModelAPI.LoginResponse>> = mRemote.register(register)
         call.enqueue(object : Callback<BaseResponse<UserModelAPI.LoginResponse>> {
-            override fun onFailure(call: Call<BaseResponse<UserModelAPI.LoginResponse>>, t: Throwable) {
+            override fun onFailure(
+                call: Call<BaseResponse<UserModelAPI.LoginResponse>>,
+                t: Throwable
+            ) {
                 listener.onFailure(t.message.toString())
             }
 
-            override fun onResponse(call: Call<BaseResponse<UserModelAPI.LoginResponse>>, response: Response<BaseResponse<UserModelAPI.LoginResponse>>) {
+            override fun onResponse(
+                call: Call<BaseResponse<UserModelAPI.LoginResponse>>,
+                response: Response<BaseResponse<UserModelAPI.LoginResponse>>
+            ) {
                 response.body()?.let { listener.onSuccess(it) }
             }
         })
@@ -73,7 +96,15 @@ class UserRepositoryAPI {
      * fazendo um mRemote.update, que é um Put no UserService,
      * e então editando o usuário.
      */
-    fun update(nome: String, cpf: String, email: String, telefone: String, nascimento: String, senha: String, listener: APIListener){
+    fun update(
+        nome: String,
+        cpf: String,
+        email: String,
+        telefone: String,
+        nascimento: String,
+        senha: String,
+        listener: APIListener
+    ) {
         val update = User.Update()
         update.nome = nome
         update.email = email
@@ -84,11 +115,17 @@ class UserRepositoryAPI {
 
         val call: Call<BaseResponse<UserModelAPI.LoginResponse>> = mRemote.update(update)
         call.enqueue(object : Callback<BaseResponse<UserModelAPI.LoginResponse>> {
-            override fun onFailure(call: Call<BaseResponse<UserModelAPI.LoginResponse>>, t: Throwable) {
+            override fun onFailure(
+                call: Call<BaseResponse<UserModelAPI.LoginResponse>>,
+                t: Throwable
+            ) {
                 listener.onFailure(t.message.toString())
             }
 
-            override fun onResponse(call: Call<BaseResponse<UserModelAPI.LoginResponse>>, response: Response<BaseResponse<UserModelAPI.LoginResponse>>) {
+            override fun onResponse(
+                call: Call<BaseResponse<UserModelAPI.LoginResponse>>,
+                response: Response<BaseResponse<UserModelAPI.LoginResponse>>
+            ) {
                 response.body()?.let { listener.onSuccess(it) }
             }
         })
@@ -101,7 +138,14 @@ class UserRepositoryAPI {
      * armazena no Request do Update, e faz uma comunicação com a API,
      * fazendo um mRemote.update, que é um Put no UserService, e então editando o usuário.
      */
-    fun updateUnsyncUsers(nome: String, cpf: String, email: String, telefone: String, nascimento: String, senha: String){
+    fun updateUnsyncUsers(
+        nome: String,
+        cpf: String,
+        email: String,
+        telefone: String,
+        nascimento: String,
+        senha: String
+    ) {
         val update = User.Update()
         update.nome = nome
         update.email = email
@@ -112,11 +156,17 @@ class UserRepositoryAPI {
 
         val call: Call<BaseResponse<UserModelAPI.LoginResponse>> = mRemote.update(update)
         call.enqueue(object : Callback<BaseResponse<UserModelAPI.LoginResponse>> {
-            override fun onFailure(call: Call<BaseResponse<UserModelAPI.LoginResponse>>, t: Throwable) {
+            override fun onFailure(
+                call: Call<BaseResponse<UserModelAPI.LoginResponse>>,
+                t: Throwable
+            ) {
                 var s = ""
             }
 
-            override fun onResponse(call: Call<BaseResponse<UserModelAPI.LoginResponse>>, response: Response<BaseResponse<UserModelAPI.LoginResponse>>) {
+            override fun onResponse(
+                call: Call<BaseResponse<UserModelAPI.LoginResponse>>,
+                response: Response<BaseResponse<UserModelAPI.LoginResponse>>
+            ) {
                 var s = ""
             }
         })

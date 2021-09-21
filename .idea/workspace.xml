@@ -36,40 +36,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Studio_Web.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Studio_Web.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/constants/SharedPreferencesConstants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/constants/SharedPreferencesConstants.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/listener/APIListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/listener/APIListener.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/services/repository/local/SecurityPreferences.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/services/repository/local/SecurityPreferences.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/services/repository/local/UserDatabaseHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/services/repository/local/UserDatabaseHelper.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/services/repository/local/UserRepositoryDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/services/repository/local/UserRepositoryDB.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/services/repository/remote/orcamento/OrcamentoRepositoryAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/services/repository/remote/orcamento/OrcamentoRepositoryAPI.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/services/repository/remote/orcamento/OrcamentoService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/services/repository/remote/orcamento/OrcamentoService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/services/repository/remote/user/UserRepositoryAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/services/repository/remote/user/UserRepositoryAPI.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/view/InicioActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/view/InicioActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/view/UserActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/view/UserActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/view/recyclerview/OrcamentoViewHolder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/view/recyclerview/OrcamentoViewHolder.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/viewmodel/LoginViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/viewmodel/LoginViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/viewmodel/OrcamentoViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studioweb/viewmodel/OrcamentoViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_user.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_inicio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_inicio.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/row_orcamento.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/row_orcamento.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[6fccee61]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/nikolassilva/.android/avd/Pixel_5_API_28.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />

@@ -20,6 +20,7 @@ class UserDatabaseHelper(context: Context) :
      * Função de update do banco de dados. É executada toda vez que muda a versão. (ainda não implementada)
      */
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
+
     }
 
 

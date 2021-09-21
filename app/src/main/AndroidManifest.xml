@@ -14,18 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudioWeb">
         <activity
-            android:name=".view.EditOrcamentoActivity"
-            android:exported="true" />
-        <activity
             android:name=".view.InicioActivity"
             android:exported="true"
             android:label="@string/title_activity_orcamento"
             android:theme="@style/Theme.StudioWeb.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".view.EditUserActivity"
@@ -42,7 +35,11 @@
         <activity
             android:name=".view.SplashActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data

@@ -117,7 +117,9 @@ class UserRepositoryDB private constructor(context: Context) {
                 if (cpf == cpfBanco && senha == senhaBanco) {
                     user = UserLoginModelDB(
                         cpfBanco,
-                        senhaBanco,
+                        s        <activity
+            android:name=".view.EditOrcamentoActivity"
+            android:exported="true" />enhaBanco,
                         responseNome,
                         responseCpf,
                         responseEmail,
